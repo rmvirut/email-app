@@ -1,0 +1,16 @@
+<div *ngFor="let email of emails; index as emailId">
+  <div *ngIf="!email.archive">
+    <h3>{{ email.name }}</h3>
+    <span *ngIf="email.sent; else notSent">
+      Sent: {{ email.sendDate }}
+    </span>
+    <ng-template #notSent>
+      <span>Draft</span>
+    </ng-template>
+    <p>
+      Subject: {{ email.subject }}
+      <br />
+    </p>
+  </div>
+
+</div>

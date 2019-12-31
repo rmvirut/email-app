@@ -1,0 +1,10 @@
+<div *ngIf='email'>
+  <h2>{{ email.subject }}</h2>
+  <span>from: {{ email.from }}<br>To: {{email.to}}</span><br>
+  <span>Received: {{ email.receiveDate }}</span>
+  <br>
+  <p>
+    {{ email.body }}
+  </p>
+</div>
+<app-footer></app-footer>

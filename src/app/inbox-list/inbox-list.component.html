@@ -1,0 +1,14 @@
+<!-- <h2 class="header">Inbox</h2> -->
+
+<!-- <div *ngFor="let email of emails; index as emailId"> -->
+<div *ngFor="let email of (emails); index as emailId">
+  <a class="list-item" [routerLink]="['/inbox', emailId]">
+    <h3>{{ email.name }}</h3>
+    <span>Recevied: {{ email.received }}</span>
+
+    <p>
+      Subject: {{ email.subject }}
+      <br />
+    </p>
+  </a>
+</div>
